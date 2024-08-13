@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ObjectOrientedAssignment
 {
+    enum EMood {MOOD_HAPPY = 1, MOOD_SCARE = 2 }
     internal abstract class Animal
     {
         protected bool Mammals;  //יונקים
@@ -15,11 +16,9 @@ namespace ObjectOrientedAssignment
 
         //public const int MOOD_SCARE = 2; //מצב רוח מפוחד-מוגדר 2
 
-        public enum enumMood { MOOD_HAPPY=1, MOOD_SCARE=2 };
+        protected EMood mood; //מצב רוח
 
-        protected int mood { get; set; } //מצב רוח
-
-        public Animal(bool mammals, bool carnivorous, int mood)
+        public Animal(bool mammals, bool carnivorous, EMood mood)
         {
             Mammals = mammals;
             Carnivorous = carnivorous;

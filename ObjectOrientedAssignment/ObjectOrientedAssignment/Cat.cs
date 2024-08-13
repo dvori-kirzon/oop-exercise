@@ -10,7 +10,7 @@ namespace ObjectOrientedAssignment
     {
         private int NumberOfLegs;
 
-        public Cat(int mood) : base(true, true, mood)
+        public Cat(EMood mood) : base(true, true, mood)
         {
             this.NumberOfLegs = 4;
         }
